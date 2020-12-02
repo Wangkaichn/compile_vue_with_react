@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-02 14:17:36
- * @LastEditTime: 2020-12-02 15:17:17
+ * @LastEditTime: 2020-12-02 20:25:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/vue-react/webpack.config.js
@@ -11,19 +11,27 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   module: {
     rules: [
-      { test: /\.css$/, use: 'css-loader' },
-      { test: /\.(js|jsx)$/,
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      }, { 
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            "presets": ["@babel/preset-react"],
-          }
+          // options: {
+          //   "presets": ["@babel/preset-react"],
+          // }
         },
+      }, { 
+        test: /\.vue$/,
+        exclude: /(node_modules|bower_components)/,
+        use: 'vue-loader',
       }
     ]
   },
@@ -40,6 +48,7 @@ module.exports = {
       title: 'Hot Module Replacement',
       template: './dist/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new VueLoaderPlugin()
   ],
 };
