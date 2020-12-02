@@ -1,5 +1,4 @@
 <h1>将 Vue 和 React 一起打包</h1>
-<br/>
 <a href="https://github.com/vuejs/vue-loader">vue-loader</a>
 <br />
 <a href="https://github.com/vuejs/vue-loader/blob/master/docs/spec.md">
