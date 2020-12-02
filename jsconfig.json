@@ -1,0 +1,18 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-02 20:52:23
+ * @LastEditTime: 2020-12-02 20:57:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /MyNote/CompileVueWithReact/jsconfig.js
+ */
+
+ {
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

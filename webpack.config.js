@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-02 14:17:36
- * @LastEditTime: 2020-12-02 20:25:17
+ * @LastEditTime: 2020-12-02 20:49:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/vue-react/webpack.config.js
@@ -25,7 +25,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           // options: {
-          //   "presets": ["@babel/preset-react"],
+          //   'presets': ['@babel/preset-react'],
           // }
         },
       }, { 
@@ -51,4 +51,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin()
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', 'ts', 'tsx', '.vue'],
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+      '@': path.join(__dirname, 'src')
+    }
+  },
 };

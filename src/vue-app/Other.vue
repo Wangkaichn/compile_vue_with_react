@@ -1,6 +1,6 @@
 <template>
   <div>
-    It is vue，double Count is <span class="example">{{ count }}</span>
+    It is vue，current Count is <span class="example">{{ count }}</span>
   </div>
 </template>
 <script>
