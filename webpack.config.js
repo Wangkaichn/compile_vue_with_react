@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-02 14:17:36
- * @LastEditTime: 2020-12-02 20:49:37
+ * @LastEditTime: 2020-12-02 21:42:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/vue-react/webpack.config.js
@@ -24,9 +24,9 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          // options: {
-          //   'presets': ['@babel/preset-react'],
-          // }
+          options: {
+            presets: ['@babel/preset-react']
+          }
         },
       }, { 
         test: /\.vue$/,
