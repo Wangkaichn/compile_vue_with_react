@@ -24,7 +24,7 @@ const Other = () => {
   return (
     <h2>
       It is React, current Count is&nbsp;
-      <span className={styles.count}>{count}</span>
+      <span className={styles.count}>{ count }</span>
     </h2>
   )
 }
