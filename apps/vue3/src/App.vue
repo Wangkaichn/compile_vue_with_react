@@ -1,18 +1,30 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-12-03 19:16:25
+ * @LastEditTime: 2020-12-03 20:07:53
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /MyNote/CompileVueWithReact/apps/vue3/src/App.vue
+-->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div>
+    <Count />
+    <DoubleCount />
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import { defineComponent } from 'vue'
+import Count from './components/Count/index.vue'
+import DoubleCount from './components/DoubleCount/index.vue'
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
+    Count,
+    DoubleCount
   }
-});
+})
 </script>
 
 <style lang="scss">
