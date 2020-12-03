@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-12-02 14:17:36
- * @LastEditTime: 2020-12-02 21:42:27
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /MyNote/vue-react/webpack.config.js
- */
-
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -18,8 +9,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      }, { 
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -27,11 +23,17 @@ module.exports = {
           options: {
             presets: ['@babel/preset-react']
           }
-        },
-      }, { 
+        }
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: 'ts-loader'
+      },
+      {
         test: /\.vue$/,
         exclude: /(node_modules|bower_components)/,
-        use: 'vue-loader',
+        use: 'vue-loader'
       }
     ]
   },
@@ -52,10 +54,10 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   resolve: {
-    extensions: ['.js', '.jsx', 'ts', 'tsx', '.vue'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@': path.join(__dirname, 'src')
+      '@src': path.join(__dirname, 'src')
     }
-  },
-};
+  }
+}
