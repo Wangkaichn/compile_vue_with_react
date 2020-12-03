@@ -4,9 +4,11 @@
 vue3 分支继承顺序：vue3
 
 
-<h2>2020.12.3</h2>
-ESLint 同时对 vue 和 react 配置耦合
+<h2>Plan</h2>
+Vue CLI 起一个 vue3-app ，完事修改 HtmlWebpackPlugin.template ，将挂载节点的 html 文件提到上层文件。React 思路一致。
 <br />
-各自起一个项目，分别实现 ESLint，顺便升级到 vue3 
+对于 React ，使用 <a href="https://zh-hans.reactjs.org/docs/portals.html">Portals</a>
 <br />
-vue-loader 不支持 vue3
+对于 Vue ，使用 <a href="https://vue3js.cn/docs/zh/guide/teleport.html#%E4%B8%8E-vue-components-%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8">teleport</a>
+<br />
+所以，我们需要一个 dom 节点 id 管理器，以生成全局唯一 id ，以供组件挂载
