@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-04 17:30:31
+ * @LastEditTime: 2020-12-04 21:07:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -16,7 +16,7 @@ module.exports = {
   mode: 'development',
   entry: {
     react17: './apps/react17/src/index.js',
-    vue3: "./apps/vue3/src/index.js"
+    vue3: "./apps/vue3/src/index.ts"
   },
   output: {
     filename: '[name].[hash].bundle.js',
@@ -41,12 +41,28 @@ module.exports = {
       { 
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-react',
+              ]
+            }
+          },
+        ]
       },
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: 'ts-loader'
+      },
+      {
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        use: [
+          'vue-loader'
+        ]
       },
     ]
   },
@@ -63,7 +79,7 @@ module.exports = {
       title: 'Hot Module Replacement',
       template: './public/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
