@@ -1,5 +1,11 @@
 <h1>将 Vue 和 React 一起打包</h1>
 
+<h2>await</h1>
+```json
+"buildreact": "./apps/react17/node_modules/.bin/webpack --config ./apps/react17/webpack.config.js"
+```
+vue 是用脚手架起的，所以无法固定 loader 的路径，又一次失败
+
 <h2>Plan</h2>
 Vue CLI 起一个 vue3-app ，完事修改 HtmlWebpackPlugin.template ，将挂载节点的 html 文件提到上层文件。React 思路一致。
 <br />
