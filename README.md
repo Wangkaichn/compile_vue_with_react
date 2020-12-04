@@ -2,4 +2,4 @@
 
 <b>多入口打包导致 HMR 工作有异常</b>
 <br />
-多入口打包更新，支持 HMR，devServer 
+多入口打包，支持 HMR，devServer 
