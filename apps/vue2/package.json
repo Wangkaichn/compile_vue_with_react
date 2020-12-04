@@ -1,5 +1,5 @@
 {
-  "name": "react17",
+  "name": "vue2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "vue": "^2.6.12"
   }
 }
