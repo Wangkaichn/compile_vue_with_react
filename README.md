@@ -7,4 +7,7 @@ vue3 分支继承顺序：vue3
 <h2>2020.12.3</h2>
 ESLint 同时对 vue 和 react 配置，尝试失败
 <br/ >
-standard-await => vue3
+standard-await => vue3 => vue3-react17 => vue3-react17-1.*
+
+<h2>Product</h2>
+vue3-react17-1.1: 多入口打包，支持 HMR，devServer 
