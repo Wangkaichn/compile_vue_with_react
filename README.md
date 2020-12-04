@@ -1,7 +1,4 @@
 <h1>将 Vue 和 React 一起打包</h1>
-分支继承顺序：master => react => vue => standard ==> standard-await
-<br />
-vue3 分支继承顺序：vue3
 
 <h2>Plan</h2>
 Vue CLI 起一个 vue3-app ，完事修改 HtmlWebpackPlugin.template ，将挂载节点的 html 文件提到上层文件。React 思路一致。
