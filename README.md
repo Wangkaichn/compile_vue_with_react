@@ -1,3 +1,5 @@
 <h1>将 Vue 和 React 一起打包</h1>
 
-多入口打包更新，支持 HMR，devServer
+<b>多入口打包导致 HMR 工作有异常</b>
+<br />
+多入口打包更新，支持 HMR，devServer 
