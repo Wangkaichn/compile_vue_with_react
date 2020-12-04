@@ -3,7 +3,6 @@
 <br />
 vue3 分支继承顺序：vue3
 
-
 <h2>Plan</h2>
 Vue CLI 起一个 vue3-app ，完事修改 HtmlWebpackPlugin.template ，将挂载节点的 html 文件提到上层文件。React 思路一致。
 <br />
@@ -12,3 +11,9 @@ Vue CLI 起一个 vue3-app ，完事修改 HtmlWebpackPlugin.template ，将挂�
 对于 Vue ，使用 <a href="https://vue3js.cn/docs/zh/guide/teleport.html#%E4%B8%8E-vue-components-%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8">teleport</a>
 <br />
 所以，我们需要一个 dom 节点 id 管理器，以生成全局唯一 id ，以供组件挂载
+
+<h2>Question</h2>
+1.如何解析 tsx 文件中的 class 组件, function 组件是可以编译的
+<br />
+2.在根目录启动时，可以启动两个项目。两个项目向根目录注入打包后文件，在根目录 start http-serve
+<br />
