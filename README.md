@@ -4,7 +4,7 @@
 
 ```json
 "scripts": {
-"buildreact": "./apps/react17/node_modules/.bin/webpack --config ./apps/react17/webpack.config.js"
+  "buildreact": "./apps/react17/node_modules/.bin/webpack --config ./apps/react17/webpack.config.js"
 }
 
 ```
