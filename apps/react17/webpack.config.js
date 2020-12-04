@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-04 11:56:41
+ * @LastEditTime: 2020-12-04 14:34:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -12,7 +12,12 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
-  entry: './src/App.tsx', 
+  mode: 'development',
+  entry: './src/App.tsx',
+  output: {
+    filename: 'react17-bundle.js',
+    path: path.join(__dirname, '../../dist')
+  },
   module: {
     rules: [
       {
@@ -51,10 +56,10 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Hot Module Replacement',
-      template: path.join(__dirname, '../../public/index.html')
+      template: path.join(__dirname, '../../dist/index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
