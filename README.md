@@ -1,8 +1,12 @@
 <h1>将 Vue 和 React 一起打包</h1>
 
 <h2>await</h1>
+
 ```json
+"scripts": {
 "buildreact": "./apps/react17/node_modules/.bin/webpack --config ./apps/react17/webpack.config.js"
+}
+
 ```
 vue 是用脚手架起的，所以无法固定 loader 的路径，又一次失败
 
