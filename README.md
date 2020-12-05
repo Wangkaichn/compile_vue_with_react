@@ -12,8 +12,10 @@ standard-await => vue3
 <h2>Product</h2>
 vue3-react17-1.1: 多入口打包，支持 HMR，devServer
 <br />
-vue2-react17-1.1: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript
+<b>vue2-react17-1.1</b>: 多入口打包，支持 HMR，devServer，<u>vue2，react17，Typescript</u>
 <br />
-vue2-react17-1.2: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，Sass，Redux，Vuex，Antd，Element
+<b>vue2-react17-1.2</b>: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，<u>Sass，Redux，Vuex，Antd，Element</u>
 <br />
-vue2-react17-1.2: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，Sass，Redux，Vuex，Antd，Element，ESLint
+<b>vue2-react17-1.3</b>: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，Sass，Redux，Vuex，Antd，Element，<u>ESLint</u>
+<br />
+<b>vue2-react17-1.5</b>: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，Sass，Redux，Vuex，Antd，Element，ESLint，<u>Prettier</u>
