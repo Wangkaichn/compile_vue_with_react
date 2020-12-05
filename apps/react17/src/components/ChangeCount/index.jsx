@@ -8,11 +8,13 @@ const Count = ({ addCount }) => {
     addCount()
   }
   return (
-    <Button type="primary" onClick={handleAddCount}>Add</Button>
+    <Button type="primary" onClick={handleAddCount}>
+      Add
+    </Button>
   )
 }
 
-const mapDispatch = (dispatch) => ({
-  addCount: (payload) => Actions.AddCount(payload)(dispatch)
+const mapDispatch = dispatch => ({
+  addCount: payload => Actions.AddCount(payload)(dispatch)
 })
 export default connect(null, mapDispatch)(Count)

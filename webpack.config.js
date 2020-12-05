@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-05 11:03:03
+ * @LastEditTime: 2020-12-05 12:55:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -105,7 +105,7 @@ module.exports = {
     new VueLoaderPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
     alias: {
       '@srcR': path.join(__dirname, './apps/react17/src'),
       '@srcV': path.join(__dirname, './apps/vue2/src'),
