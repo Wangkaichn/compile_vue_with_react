@@ -10,6 +10,8 @@ ESLint 同时对 vue 和 react 配置，尝试失败
 standard-await => vue3
 
 <h2>Product</h2>
-vue3-react17-1.1: 多入口打包，支持 HMR，devServer 
+vue3-react17-1.1: 多入口打包，支持 HMR，devServer
+<br />
 vue2-react17-1.1: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript
+<br />
 vue2-react17-1.2: 多入口打包，支持 HMR，devServer，vue2，react17，Typescript，Sass，Redux，Vuex，Antd，Element
