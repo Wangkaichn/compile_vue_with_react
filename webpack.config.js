@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-05 11:03:03
+ * @LastEditTime: 2020-12-05 16:44:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -17,7 +17,7 @@ module.exports = {
   mode: 'development',
   entry: {
     react17: './apps/react17/src/index.tsx',
-    vue3: "./apps/vue2/src/index.ts"
+    vue3: "./apps/vue2/src/index.js"
   },
   output: {
     filename: '[name].[hash].bundle.js',
