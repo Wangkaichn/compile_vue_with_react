@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-04 21:22:44
+ * @LastEditTime: 2020-12-05 11:03:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -27,11 +27,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        use: 'css-loader'
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       },
       {
-        test: /\.s[ca]ss$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
@@ -54,9 +56,24 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: 'ts-loader'
+      },
+      {
+        test: /\.tsx$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-react',
+              ]
+            }
+          },
+          'ts-loader',
+        ]
       },
       {
         test: /\.vue$/,
@@ -65,6 +82,10 @@ module.exports = {
           'vue-loader'
         ]
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: 'file-loader'
+      }
     ]
   },
   devServer: {
@@ -86,7 +107,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@src': path.join(__dirname, 'src'),
+      '@srcR': path.join(__dirname, './apps/react17/src'),
+      '@srcV': path.join(__dirname, './apps/vue2/src'),
       vue$: 'vue/dist/vue.esm.js'
     }
   }

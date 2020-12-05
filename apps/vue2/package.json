@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vue": "^2.6.12"
+    "element-ui": "^2.14.1",
+    "vue": "^2.6.12",
+    "vuex": "^3.6.0"
   }
 }

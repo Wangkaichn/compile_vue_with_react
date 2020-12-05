@@ -1,18 +1,24 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 16:50:46
- * @LastEditTime: 2020-12-04 21:16:07
+ * @LastEditTime: 2020-12-05 10:53:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/src/index.js
  */
 
 import Vue from 'vue'
+import store from './store'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import ShowCount from './page/ShowCount/index.vue'
 
-var app = new Vue({
+Vue.use(ElementUI)
+new Vue({
   el: '#RootVue',
-  data: {
-    message: 'Hello Vue!'
+  store,
+  components: {
+    ShowCount
   },
-  template: '<h2>It is Vue, but vue2</h2>'
+  template: '<div><ShowCount /></div>'
 })
