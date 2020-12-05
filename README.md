@@ -1,4 +1,4 @@
-<h1>将 VUE 和 React 一起打包</h1>
+<h1>将 Vue 和 React 一起打包</h1>
 vue2 分支继承顺序：master => react => vue => standard ==> standard-await
 <br />
 vue3 分支继承顺序：vue3 => vue3-react17 => vue3-react17-1.*
