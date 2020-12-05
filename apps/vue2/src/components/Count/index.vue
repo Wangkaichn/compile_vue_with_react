@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
- * @Date: 2020-12-05 10:30:18
- * @LastEditTime: 2020-12-05 11:23:33
- * @LastEditors: Please set LastEditors
+ * @Date: 2020-12-05 11:30:29
+ * @LastEditTime: 2020-12-05 15:30:36
+ * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/vue2/src/components/Count/index.vue
 -->
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="js">
-import styles from "./index.module.scss";
+import styles from './index.module.scss'
 export default ({
   data() {
     return {

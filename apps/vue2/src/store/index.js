@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-12-05 10:26:19
- * @LastEditTime: 2020-12-05 11:23:47
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /MyNote/CompileVueWithReact/apps/vue2/src/vuex/store/index.js
- */
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 
