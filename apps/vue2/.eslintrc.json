@@ -17,7 +17,8 @@
   },
   "plugins": [
     "vue",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
     // allow async-await
@@ -41,7 +42,8 @@
     // 要求或禁止末尾逗号
     "comma-dangle": 0,
     "no-console": 1,
-    "no-alert": 1
+    "no-alert": 1,
+    "prettier/prettier": 2
   },
   "overrides": [
     {
