@@ -17,7 +17,7 @@ module.exports = {
   mode: 'development',
   entry: {
     react17: './apps/react17/src/index.tsx',
-    vue3: "./apps/vue2/src/index.js"
+    vue3: "./apps/vue2/src/index.ts"
   },
   output: {
     filename: '[name].[hash].bundle.js',
