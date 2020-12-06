@@ -8,7 +8,9 @@ const Count = ({ addCount }) => {
     addCount()
   }
   return (
-    <Button type="primary" onClick={handleAddCount}>Add</Button>
+    <Button type="primary" onClick={handleAddCount}>
+      Add
+    </Button>
   )
 }
 
