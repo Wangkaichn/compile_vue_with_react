@@ -1,13 +1,13 @@
 <h1>将 Vue 和 React 一起打包</h1>
-vue2 分支继承顺序：master => react => vue => standard ==> standard-await
+分支继承顺序：master => react => vue => standard ==> standard-await
 <br />
-vue3 分支继承顺序：vue3 => vue3-react17 => vue3-react17-1.*
+分支继承顺序：vue3 => vue3-react17 => vue3-react17-1.*
+<br />
+分支继承顺序：vue2-react17-1.* => utils
 
 
 <h2>Check Point</h2>
 standard-await => vue3
-<br />
-vue2-react17-1.5 => utils
 
 <h2>Product</h2>
 <b>vue3-react17-1.1</b>: 多入口打包，支持 HMR，devServer
