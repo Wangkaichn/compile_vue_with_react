@@ -11,5 +11,5 @@ const Count = (state) => {
   )
 }
 
-const mapStateToProps = (state) => (state)
+const mapStateToProps = (state) => state
 export default connect(mapStateToProps)(Count)
