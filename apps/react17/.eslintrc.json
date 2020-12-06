@@ -77,8 +77,8 @@
     //不能有未定义的变量: 'JSX' is not define in '() => JSX.Element'
     // "no-undef": 2,
     //未定义前不能使用
-    "no-use-before-define": 0,
-    "@typescript-eslint/no-use-before-define": 0,
+    "no-use-before-define": 2,
+    "@typescript-eslint/no-use-before-define": 2,
     //强制驼峰法命名
     "camelcase": 0,
     //强制在JSX属性（jsx-quotes）中一致使用双引号
@@ -124,7 +124,7 @@
     //防止this.state的直接变异
     "react/no-direct-mutation-state": 2, 
     //防止每个文件有多个组件定义
-    "react/no-multi-comp": 2, 
+    "react/no-multi-comp": 0, 
     //防止使用setState
     "react/no-set-state": 0, 
     //防止使用未知的DOM属性
@@ -166,6 +166,13 @@
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": ["error"]
+      }
+    },
+    {
+      "files": ["*.tsx", "*.jsx"],
+      "rules": {
+        "no-use-before-define": 0,
+        "@typescript-eslint/no-use-before-define": 0
       }
     }
   ]

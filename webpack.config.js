@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-04 09:27:54
- * @LastEditTime: 2020-12-05 16:44:25
+ * @LastEditTime: 2020-12-05 18:23:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /MyNote/CompileVueWithReact/apps/react17/webpack.config.js
@@ -16,8 +16,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   mode: 'development',
   entry: {
+    init: './public/index.js',
     react17: './apps/react17/src/index.tsx',
-    vue3: "./apps/vue2/src/index.js"
+    vue3: "./apps/vue2/src/index.ts"
   },
   output: {
     filename: '[name].[hash].bundle.js',
@@ -49,7 +50,7 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: [
-                '@babel/preset-react',
+                '@babel/preset-react'
               ]
             }
           },
@@ -107,9 +108,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
+      vue$: 'vue/dist/vue.esm.js',
       '@srcR': path.join(__dirname, './apps/react17/src'),
       '@srcV': path.join(__dirname, './apps/vue2/src'),
-      vue$: 'vue/dist/vue.esm.js'
+      '@utils': path.join(__dirname, './utils'),
     }
   }
 }
